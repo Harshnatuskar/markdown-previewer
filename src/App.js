@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import { useState } from 'react';// for displaying text in the display box
+import {marked} from 'marked';   // for markdown stuff
 import './App.css';
 
 function App() {
+  const [text,setText]=useState(`
+   # Hey
+   ## This challenge was fun
+   [music](https://youtu.be/dQw4w9WgXcQ)
+  \`text\`
+  \`\`\`
+  {
+    "animal": "Dog",
+    "name": "Cookie",
+    "age": 1
+  }
+  \`\`\`
+  - First item
+  - Second item
+  - Third item
+  > Blockquote
+  ![alt text](image.jpg)
+  **bold text**
+  `);// we use back quote to enter code inside the display box
+
+  marked.setOptions({ //interprets carriage returns and renders then as <br>(line break) element
+    breaks:true
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <textarea id="editor" onChange={(event)=>{setText(event.target.value)}}  value={text}>
+    </textarea>
+    <div 
+      id="preview" 
+      dangerouslySetInnerHTML={{__html:marked(text),}} 
+      ></div>
     </div>
   );
 }
