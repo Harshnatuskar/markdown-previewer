@@ -28,7 +28,7 @@ function App() {
   })
 
   return (
-    <div className="App">
+    <div className="App" >
     <textarea id="editor" onChange={(event)=>{setText(event.target.value)}}  value={text}>
     </textarea>
     <div 
