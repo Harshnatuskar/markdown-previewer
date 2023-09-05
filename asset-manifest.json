@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Harshnatuskar/markdown-previewer/static/css/main.073c9b0a.css",
+    "main.js": "/Harshnatuskar/markdown-previewer/static/js/main.102bee1a.js",
+    "static/js/787.a3c8b4eb.chunk.js": "/Harshnatuskar/markdown-previewer/static/js/787.a3c8b4eb.chunk.js",
+    "index.html": "/Harshnatuskar/markdown-previewer/index.html",
+    "main.073c9b0a.css.map": "/Harshnatuskar/markdown-previewer/static/css/main.073c9b0a.css.map",
+    "main.102bee1a.js.map": "/Harshnatuskar/markdown-previewer/static/js/main.102bee1a.js.map",
+    "787.a3c8b4eb.chunk.js.map": "/Harshnatuskar/markdown-previewer/static/js/787.a3c8b4eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.102bee1a.js"
+  ]
+}
