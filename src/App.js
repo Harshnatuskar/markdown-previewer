@@ -19,7 +19,7 @@ function App() {
   - Second item
   - Third item
   > Blockquote
-  ![alt text](image.jpg)
+  ![alt text](scape.jpg)
   **bold text**
   `);// we use back quote to enter code inside the display box
 
@@ -29,12 +29,17 @@ function App() {
 
   return (
     <div className="App" >
+    <h3>Editor</h3>
     <textarea id="editor" onChange={(event)=>{setText(event.target.value)}}  value={text}>
     </textarea>
-    <div 
-      id="preview" 
-      dangerouslySetInnerHTML={{__html:marked(text),}} 
-      ></div>
+    <h3>Previewer </h3>
+    <div className='previewer'>
+      <div 
+        id="preview" 
+        dangerouslySetInnerHTML={{__html:marked(text),}} 
+        ></div>   
+    </div>
+     
     </div>
   );
 }
